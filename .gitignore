@@ -1,0 +1,16 @@
+# Node.js Modules
+node_modules
+
+# Build Output
+/dist
+/build
+
+# Log
+*-error.log
+*-debug.log
+
+# Visual Studio Code
+.vscode
+
+# Misc
+.DS_Store
