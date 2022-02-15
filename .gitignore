@@ -9,8 +9,5 @@ node_modules
 *-error.log
 *-debug.log
 
-# Visual Studio Code
-.vscode
-
 # Misc
 .DS_Store
