@@ -2,7 +2,7 @@ import React, { forwardRef } from 'react';
 
 import * as S from './Button.styled';
 
-interface Props {
+export interface Props {
   type?: 'button' | 'submit';
   color?: 'primary' | 'secondary';
   variant?: 'contain' | 'outline';
