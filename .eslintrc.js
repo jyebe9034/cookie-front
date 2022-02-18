@@ -18,11 +18,16 @@ module.exports = {
       tsx: 'never',
     }],
     'react/jsx-filename-extension': ['error', {
-      extensions: ['.js', '.jsx', '.ts', '.tsx']
+      extensions: ['.js', '.jsx', '.ts', '.tsx'],
     }],
-    '@typescript-eslint/restrict-template-expressions': ['error', {
-      allowAny: true,
-    }]
+    'no-restricted-exports': ['error', {
+      restrictedNamedExports: [''],
+    }],
+    'import/prefer-default-export': 'off',
+    'react/jsx-props-no-spreading': 'off',
+    'import/no-unresolved': 'off',
+    semi: 'off',
+    '@typescript-eslint/semi': ['error'],
   },
   settings: {
     'import/resolver': {
