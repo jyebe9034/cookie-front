@@ -1,8 +1,2 @@
 # Node.js Modules
 node_modules
-
-# Config
-tsconfig.json
-
-# Storybook
-.storybook
