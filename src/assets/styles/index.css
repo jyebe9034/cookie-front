@@ -3,4 +3,9 @@
 @tailwind utilities;
 
 @import url('./font.css');
-@import url('./global.css');
+
+html,
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
