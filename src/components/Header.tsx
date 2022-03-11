@@ -29,7 +29,6 @@ export default function Header() {
       {/* <Button
         type="button"
         variant="contained"
-        color="primary"
         disableElevation
         sx={{ color: '#fff' }}
       >
