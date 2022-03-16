@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import Button from '@mui/material/Button';
 
-import UserInfo from './UserInfo';
+import UserInfo from '../UserInfo';
 
 export default function Header() {
   return (
