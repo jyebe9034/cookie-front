@@ -10,7 +10,7 @@ export default function Header() {
     <div className="flex items-center justify-between px-10 py-6">
       <div className="flex items-center">
         <Link to="/">
-          <h1 className="font-bold text-2xl">
+          <h1 className="font-bold text-2xl text-red-500">
             tumuto
           </h1>
         </Link>
