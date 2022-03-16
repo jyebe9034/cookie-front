@@ -7,6 +7,9 @@ module.exports = {
       // header: 80px, footer: 120px
       content: 'calc(100vh - 80px - 120px)',
     },
+    fontFamily: {
+      display: ['Fredoka One', 'cursive'],
+    },
   },
   plugins: [
     // eslint-disable-next-line global-require
