@@ -17,6 +17,14 @@ export default function Header() {
         <ul className="flex gap-2 ml-10">
           <li>
             <Link
+              to="/test"
+              className="px-4 py-3 text-lg"
+            >
+              테스트
+            </Link>
+          </li>
+          <li>
+            <Link
               to="/board"
               className="px-4 py-3 text-lg"
             >
