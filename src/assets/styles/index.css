@@ -2,7 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('./font.css');
+@import url('./noto-sans-kr.css');
+@import url('./fredoka-one.css');
 
 html,
 body {
