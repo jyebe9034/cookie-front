@@ -8,7 +8,7 @@ import tomatoVideo from 'assets/videos/tomato.mp4';
 export default function Login() {
   return (
     <div className="flex items-center justify-center h-screen">
-      <div className="fixed inset-0 after:content-[''] after:block after:absolute after:inset-0 after:bg-black after:opacity-50">
+      <div className="fixed inset-0 after:content-[''] after:block after:absolute after:inset-0 after:bg-black after:opacity-40">
         <video
           autoPlay
           muted
@@ -18,7 +18,7 @@ export default function Login() {
       </div>
       <div className="relative z-10">
         <Link to="/">
-          <h1 className="font-display text-6xl text-center text-red-500">
+          <h1 className="font-display text-6xl text-center text-white">
             tumuto
           </h1>
         </Link>
