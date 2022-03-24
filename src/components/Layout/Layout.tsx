@@ -6,16 +6,26 @@ import LinearProgress from '@mui/material/LinearProgress';
 import Header from '../Header';
 import Footer from '../Footer';
 
-export default function Layout() {
+interface Props {
+  header?: boolean;
+  footer?: boolean;
+}
+
+export default function Layout({ header, footer }: Props) {
   return (
     <>
-      <Header />
+      {header && <Header />}
       <Suspense fallback={<LinearProgress />}>
         <div className="px-10 min-h-content">
           <Outlet />
         </div>
       </Suspense>
-      <Footer />
+      {footer && <Footer />}
     </>
   );
 }
+
+Layout.defaultProps = {
+  header: false,
+  footer: false,
+};
