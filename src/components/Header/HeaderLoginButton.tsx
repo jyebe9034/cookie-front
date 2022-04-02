@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from '@mui/material/Button';
 
-export default function LoginButton() {
+export default function HeaderLoginButton() {
   return (
     <Button
       type="button"

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export default function Menu() {
+export default function HeaderMenu() {
   return (
     <ul className="flex gap-2 ml-10">
       <li>
