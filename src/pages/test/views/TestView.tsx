@@ -1,41 +1,28 @@
 import React, { useState } from 'react';
+import useTest from '../hooks/useTest';
 
 export default function Test() {
-  const [data, setData] = useState<number | null>(null);
-
-  const handleFetchString = () => {
-    setData(1);
-  };
-
-  const handleFetchNumber = () => {
-    setData(0);
-  };
+  const [url, setUrl] = useState<string | number | null>(null);
+  const { data } = useTest({ url });
 
   return (
     <>
       <button
         type="button"
         className="px-4 py-2 border-2"
-        onClick={handleFetchString}
+        onClick={() => setUrl('string')}
       >
         /api/test/&#123;string&#125; 요청
       </button>
       <button
         type="button"
         className="ml-4 px-4 py-2 border-2"
-        onClick={handleFetchNumber}
+        onClick={() => setUrl(1)}
       >
         /api/test/&#123;number&#125; 요청
       </button>
-      <button
-        type="button"
-        className="ml-4 px-4 py-2 border-2"
-        onClick={() => setData(null)}
-      >
-        데이터 리셋
-      </button>
       <p className="mt-4">
-        {data === null ? '데이터가 없습니다.' : data}
+        {JSON.stringify(data)}
       </p>
     </>
   );
