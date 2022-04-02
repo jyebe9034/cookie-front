@@ -16,7 +16,7 @@ export default function Layout({ header, footer }: Props) {
     <>
       {header && <Header />}
       <Suspense fallback={<LinearProgress />}>
-        <div className="px-10 min-h-content">
+        <div className="px-10 min-h-[calc(100vh_-_80px_-_120px)]">
           <Outlet />
         </div>
       </Suspense>
