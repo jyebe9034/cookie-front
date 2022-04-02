@@ -1,28 +1,19 @@
-// https://mui.com/customization/palette/
+import '@mui/material/styles';
 
-// declare module '@mui/material/styles' {
-//   interface Theme {
-//     status: {
-//       danger: React.CSSProperties['color'];
-//     };
-//   }
+declare module '@mui/material/styles' {
+  interface Palette {
+    naver: Palette['primary'];
+    kakao: Palette['primary'];
+  }
+  interface PaletteOptions {
+    naver: PaletteOptions['primary'];
+    kakao: PaletteOptions['primary'];
+  }
+}
 
-//   interface Palette {
-//     neutral: Palette['primary'];
-//   }
-//   interface PaletteOptions {
-//     neutral: PaletteOptions['primary'];
-//   }
-
-//   interface PaletteColor {
-//     darker?: string;
-//   }
-//   interface SimplePaletteColorOptions {
-//     darker?: string;
-//   }
-//   interface ThemeOptions {
-//     status: {
-//       danger: React.CSSProperties['color'];
-//     };
-//   }
-// }
+declare module '@mui/material/Button' {
+  interface ButtonPropsColorOverrides {
+    naver: true;
+    kakao: true;
+  }
+}

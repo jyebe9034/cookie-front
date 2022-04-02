@@ -5,6 +5,14 @@ const theme = createTheme({
     primary: {
       main: '#ef4444',
     },
+    naver: {
+      main: '#02d564',
+      dark: '#019e4a',
+    },
+    kakao: {
+      main: '#ffdf02',
+      dark: '#b59e02',
+    },
   },
 });
 
