@@ -3,7 +3,7 @@ import classnames from 'classnames';
 
 import UserInfoProfile from './UserInfoProfile';
 import UserInfoWebtoon from './UserInfoWebtoon';
-import UserInfoUtils from './UserInfoUtils';
+import UserInfoUtil from './UserInfoUtil';
 
 interface Props {
   isOpened: boolean;
@@ -22,7 +22,7 @@ export default function UserInfoPopup({ isOpened }: Props) {
     >
       <UserInfoProfile />
       <UserInfoWebtoon />
-      <UserInfoUtils />
+      <UserInfoUtil />
     </div>
   );
 }
