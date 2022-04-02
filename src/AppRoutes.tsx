@@ -3,8 +3,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Layout from 'components/Layout';
 
-const TestPage = lazy(() => import('pages/Test'));
-const LoginPage = lazy(() => import('pages/Login'));
+const TestPage = lazy(() => import('pages/test/views/TestView'));
+const LoginPage = lazy(() => import('pages/login/views/LoginView'));
 
 export default function AppRoutes() {
   return (
