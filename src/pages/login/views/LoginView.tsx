@@ -9,7 +9,7 @@ export default function Login() {
   return (
     <div className="flex items-center justify-center h-screen">
       <TomatoVideo />
-      <div className="relative z-10">
+      <div className="relative z-10 -mt-16">
         <Link to="/">
           <h1 className="font-display text-6xl text-center text-white">
             tumuto
