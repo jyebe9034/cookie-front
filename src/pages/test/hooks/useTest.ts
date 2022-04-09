@@ -5,7 +5,6 @@ interface Props {
 }
 
 export default function useTest({ url }: Props) {
-  console.log(url);
   return useQuery(
     'test-string',
     async () => {
