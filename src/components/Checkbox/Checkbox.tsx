@@ -7,7 +7,6 @@ interface Props {
 
 function Checkbox({ label, ...props }: Props, ref: React.Ref<HTMLInputElement>) {
   return (
-    // eslint-disable-next-line jsx-a11y/label-has-associated-control
     <label>
       <input
         {...props}
