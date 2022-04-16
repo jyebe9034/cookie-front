@@ -47,7 +47,7 @@ export default function JoinView() {
             className="flex flex-col items-center w-[800px] mt-[80px] mx-auto"
             onSubmit={handleSubmit(onSubmit)}
           >
-            <div className="grid gap-y-24">
+            <div className="grid gap-y-28">
               <JoinAvatar />
               <JoinNickname />
               <JoinTaste />
