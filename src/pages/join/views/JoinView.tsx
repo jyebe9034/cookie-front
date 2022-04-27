@@ -8,7 +8,7 @@ import JoinNickname from '../components/JoinNickname';
 import JoinTaste from '../components/JoinTaste';
 
 interface Data {
-  avatar: any;
+  avatar: FileList | null;
   nickname: string;
   taste: string[];
 }
