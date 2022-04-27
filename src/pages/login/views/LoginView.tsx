@@ -9,7 +9,7 @@ export default function Login() {
     <div className="flex items-center justify-center h-screen">
       <TomatoVideo />
       <div className="relative z-10 -mt-16">
-        <h1 className="font-display text-6xl text-center text-white">
+        <h1 className="font-fredoka text-6xl text-center text-white">
           tumuto
         </h1>
         <div className="grid gap-y-5 mt-28">

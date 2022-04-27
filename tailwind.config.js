@@ -14,7 +14,8 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      display: ['Fredoka One', 'cursive'],
+      fredoka: ['Fredoka One', 'cursive'],
+      jalnan: ['Jalnan', 'cursive'],
     },
     colors: {
       ...require('tailwindcss/colors'),
