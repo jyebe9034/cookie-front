@@ -41,6 +41,7 @@
     "react/jsx-filename-extension": ["error", {
       "extensions": [".tsx"]
       }],
-    "jsx-a11y/label-has-associated-control": "off"
+    "jsx-a11y/label-has-associated-control": "off",
+    "react/require-default-props": "off"
   }
 }

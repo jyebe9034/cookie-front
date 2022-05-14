@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from '@mui/material/Button';
 
-export default function KakaoLoginButton() {
+export default function LoginKakaoButton() {
   return (
     <Button
       type="button"

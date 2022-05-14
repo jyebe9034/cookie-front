@@ -11,7 +11,7 @@ interface Props {
 
 export default function UserInfoPopup({ isOpened }: Props) {
   return (
-    <div className={classnames('absolute right-0 w-96 rounded-lg shadow-xl transition-all', {
+    <div className={classnames('absolute right-0 w-96 bg-white rounded-lg shadow-xl transition-all', {
       '-z-10': !isOpened,
       'top-8': !isOpened,
       'opacity-0': !isOpened,
