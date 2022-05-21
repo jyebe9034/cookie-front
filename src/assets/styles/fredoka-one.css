@@ -2,5 +2,5 @@
   font-family: 'Fredoka One';
   font-weight: 400;
   src: url('../fonts/FredokaOne-Regular.woff') format('woff'),
-    url('../fonts/FredokaOne-Regular.otf') format('truetype');
+    url('../fonts/FredokaOne-Regular.otf') format('opentype');
 }

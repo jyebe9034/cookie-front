@@ -1,6 +1,6 @@
 import React from 'react';
 
-import WebtoonThumbnail from './WebtoonThumbnail';
+import WebtoonThumbnail from '../WebtoonThumbnail/WebtoonThumbnail';
 import WebtoonInfo from './WebtoonInfo';
 import WebtoonUtils from './WebtoonUtils';
 

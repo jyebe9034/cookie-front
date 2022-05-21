@@ -1,5 +1,6 @@
 import React, { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
+import classname from 'classnames';
 
 import LinearProgress from '@mui/material/LinearProgress';
 
@@ -16,7 +17,10 @@ export default function Layout({ header, footer }: Props) {
     <>
       {header && <Header />}
       <Suspense fallback={<LinearProgress />}>
-        <div className="px-10 min-h-[calc(100vh_-_80px_-_120px)]">
+        <div className={classname('min-h-[calc(100vh_-_80px_-_120px)] px-10', {
+          'pb-28': header && footer,
+        })}
+        >
           <Outlet />
         </div>
       </Suspense>

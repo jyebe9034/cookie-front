@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from '@mui/material/Button';
 
-export default function NaverLoginButton() {
+export default function LoginNaverButton() {
   return (
     <Button
       type="button"

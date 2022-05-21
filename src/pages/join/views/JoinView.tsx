@@ -8,7 +8,7 @@ import JoinNickname from '../components/JoinNickname';
 import JoinTaste from '../components/JoinTaste';
 
 interface Data {
-  avatar: any;
+  avatar: FileList | null;
   nickname: string;
   taste: string[];
 }
@@ -39,7 +39,7 @@ export default function JoinView() {
   return (
     <div className="flex items-center justify-center min-h-screen">
       <div className="py-36">
-        <h1 className="font-display text-6xl text-red-500 text-center">
+        <h1 className="font-fredoka text-6xl text-red-500 text-center">
           tumuto
         </h1>
         <FormProvider {...formMethods}>
