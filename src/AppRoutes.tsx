@@ -8,6 +8,7 @@ const TestPage = lazy(() => import('pages/test/views/TestView'));
 const JoinView = lazy(() => import('pages/join/views/JoinView'));
 const LoginPage = lazy(() => import('pages/login/views/LoginView'));
 const MainView = lazy(() => import('pages/main/views/MainView'));
+const BoardEditView = lazy(() => import('pages/board/views/BoardEditView'));
 
 export default function AppRoutes() {
   return (
@@ -20,6 +21,7 @@ export default function AppRoutes() {
         <Route path="/" element={<Layout header footer />}>
           <Route path="/test" element={<TestPage />} />
           <Route path="/" element={<MainView />} />
+          <Route path="/board/add" element={<BoardEditView />} />
         </Route>
       </Routes>
     </BrowserRouter>
