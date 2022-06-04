@@ -46,18 +46,3 @@ export default function BoardEditFormContent() {
     </section>
   );
 }
-
-// setEditor() {
-//   this.noticeEditor = new Editor({
-
-//     hooks: {
-//       addImageBlobHook: (file, callback) => {
-//         const formData = new FormData()
-//         formData.append('contentImage', file)
-// boardService.uploadImageFile(formData).then(response => {
-//   callback(response.data.imageUrl, response.data.fileName)
-// })
-//       }
-//     },
-//   })
-// }
