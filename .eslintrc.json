@@ -42,6 +42,7 @@
       "extensions": [".tsx"]
       }],
     "jsx-a11y/label-has-associated-control": "off",
-    "react/require-default-props": "off"
+    "react/require-default-props": "off",
+    "arrow-body-style": "off"
   }
 }

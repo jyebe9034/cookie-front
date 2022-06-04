@@ -15,7 +15,7 @@ export default function UserInfoPopup({ isOpened }: Props) {
       '-z-10': !isOpened,
       'top-8': !isOpened,
       'opacity-0': !isOpened,
-      'z-0': isOpened,
+      'z-10': isOpened,
       'top-12': isOpened,
       'opacity-100': isOpened,
     })}
