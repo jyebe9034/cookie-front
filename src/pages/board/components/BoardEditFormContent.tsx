@@ -9,6 +9,11 @@ export default function BoardEditFormContent() {
   const editorRef = useRef(null);
   const { control } = useFormContext();
 
+  const addImageBlobHook = (file: Blob | File) => {
+    const formData = new FormData();
+    formData.append('contentImage', file);
+  };
+
   return (
     <section className="w-full">
       <p className="flex items-center text-xl">
@@ -23,9 +28,11 @@ export default function BoardEditFormContent() {
               ref={editorRef}
               language="ko"
               height="600px"
+              hideModeSwitch
               useCommandShortcut
               initialEditType="wysiwyg"
               placeholder="내용을 입력해주세요"
+              hooks={{ addImageBlobHook }}
               onChange={() => {
                 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
                 // @ts-ignore
@@ -39,3 +46,18 @@ export default function BoardEditFormContent() {
     </section>
   );
 }
+
+// setEditor() {
+//   this.noticeEditor = new Editor({
+
+//     hooks: {
+//       addImageBlobHook: (file, callback) => {
+//         const formData = new FormData()
+//         formData.append('contentImage', file)
+// boardService.uploadImageFile(formData).then(response => {
+//   callback(response.data.imageUrl, response.data.fileName)
+// })
+//       }
+//     },
+//   })
+// }
