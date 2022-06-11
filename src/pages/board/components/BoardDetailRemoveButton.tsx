@@ -6,7 +6,7 @@ export default function BoardDetailRemoveButton() {
     <Button
       type="button"
       variant="contained"
-      color="disabled"
+      color="secondary"
       disableElevation
     >
       삭제

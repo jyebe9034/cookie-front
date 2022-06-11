@@ -22,7 +22,6 @@ export default function PostItem() {
         size="large"
         variant="outlined"
         disableElevation
-        sx={{ width: 150 }}
       >
         웹툰 보기
       </Button>

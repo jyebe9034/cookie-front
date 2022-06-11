@@ -7,7 +7,6 @@ export default function HeaderLoginButton() {
       type="button"
       variant="contained"
       disableElevation
-      sx={{ color: '#fff' }}
     >
       로그인
     </Button>

@@ -23,7 +23,6 @@ export default function BoardListView() {
           size="large"
           variant="contained"
           disableElevation
-          sx={{ width: 150 }}
           onClick={handleMoveEditPage}
         >
           작성
