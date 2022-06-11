@@ -21,7 +21,7 @@ export default function BoardListView() {
           disableElevation
           onClick={() => navigate('/board/add')}
         >
-          작성
+          작성하기
         </Button>
       </div>
 
