@@ -11,7 +11,7 @@ export default function PostItem() {
   return (
     <div className="flex items-center p-5 rounded-lg transition-colors hover:bg-gray-100">
       <Link
-        to="/"
+        to="/board/1"
         className="flex flex-1 items-center gap-x-5 mr-6"
       >
         <WebtoonThumbnail size="large" />
