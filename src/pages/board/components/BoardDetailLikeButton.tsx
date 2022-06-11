@@ -12,12 +12,12 @@ export default function BoardDetailLikeButton() {
       type="button"
       onClick={() => setIsLiked(!isLiked)}
     >
-      <p className={classNames('flex items-center gap-x-1.5 text-xl font-medium', {
+      <p className={classNames('flex items-center gap-x-1.5 text-lg font-medium', {
         'text-gray-400': !isLiked,
         'text-red-500': isLiked,
       })}
       >
-        {isLiked ? <IconFavorite fontSize="large" /> : <IconFavoriteBorder fontSize="large" />}
+        {isLiked ? <IconFavorite /> : <IconFavoriteBorder />}
         2,900
       </p>
     </button>

@@ -1,7 +1,10 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import Button from '@mui/material/Button';
 
-export default function BoardDetailRemoveButton() {
+export default function BoardDetailEditButton() {
+  const navigate = useNavigate();
+
   return (
     <Button
       type="button"
@@ -9,8 +12,9 @@ export default function BoardDetailRemoveButton() {
       color="secondary"
       disableElevation
       sx={{ width: '100px' }}
+      onClick={() => navigate('/board')}
     >
-      삭제
+      수정
     </Button>
   );
 }

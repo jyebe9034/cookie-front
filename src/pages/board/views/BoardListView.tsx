@@ -8,10 +8,6 @@ import PostItem from 'components/PostItem';
 export default function BoardListView() {
   const navigate = useNavigate();
 
-  const handleMoveEditPage = () => {
-    navigate('/board/add');
-  };
-
   return (
     <div className="mt-10">
       <div className="flex items-center justify-between pb-4 border-b">
@@ -23,7 +19,7 @@ export default function BoardListView() {
           size="large"
           variant="contained"
           disableElevation
-          onClick={handleMoveEditPage}
+          onClick={() => navigate('/board/add')}
         >
           작성
         </Button>

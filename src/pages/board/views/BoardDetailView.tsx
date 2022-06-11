@@ -12,10 +12,10 @@ export default function BoardDetailView() {
         <BoardDetailTitle />
         <BoardDetailInfo />
       </div>
-      <div className="mt-7">
+      <div className="min-h-[600px] mt-7">
         <BoardDetailContent />
       </div>
-      <div className="mt-7 border-t">
+      <div className="mt-7 pt-4 border-t">
         <BoardDetailUtils />
       </div>
     </>
