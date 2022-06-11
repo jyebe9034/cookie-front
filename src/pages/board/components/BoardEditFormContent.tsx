@@ -3,7 +3,7 @@ import { useFormContext, Controller } from 'react-hook-form';
 import { Editor } from '@toast-ui/react-editor';
 import '@toast-ui/editor/dist/toastui-editor.css';
 
-import './BoardEditFormContent.css';
+import './ToastUIEditor.css';
 
 export default function BoardEditFormContent() {
   const editorRef = useRef(null);
@@ -19,7 +19,7 @@ export default function BoardEditFormContent() {
       <p className="flex items-center text-xl">
         내용
       </p>
-      <div className="mt-[15px] text-lg">
+      <div className="toastui-editor-box mt-[15px] text-lg">
         <Controller
           name="content"
           control={control}
