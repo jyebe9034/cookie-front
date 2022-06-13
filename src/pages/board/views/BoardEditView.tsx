@@ -46,7 +46,6 @@ export default function BoardEditView() {
             size="large"
             variant="contained"
             disableElevation
-            sx={{ width: 150 }}
             disabled={!webtoon || !title || !content}
           >
             등록

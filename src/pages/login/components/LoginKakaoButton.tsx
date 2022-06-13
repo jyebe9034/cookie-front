@@ -11,7 +11,6 @@ export default function LoginKakaoButton() {
       sx={{
         width: 450,
         height: 55,
-        borderRadius: 2,
         fontSize: 18,
         fontWeight: 'bold',
         color: '#371b1d',

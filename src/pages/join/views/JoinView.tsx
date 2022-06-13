@@ -61,9 +61,7 @@ export default function JoinView() {
                 width: '600px',
                 marginTop: '120px',
                 padding: '10px 0',
-                borderRadius: '8px',
                 fontSize: '1.25rem',
-                color: '#fff',
               }}
             >
               가입하기

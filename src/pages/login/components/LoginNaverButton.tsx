@@ -11,10 +11,8 @@ export default function LoginNaverButton() {
       sx={{
         width: 450,
         height: 55,
-        borderRadius: 2,
         fontSize: 18,
         fontWeight: 'bold',
-        color: '#fff',
       }}
     >
       네이버로 시작하기
