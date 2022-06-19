@@ -31,10 +31,7 @@ export default function BoardEditView() {
 
   return (
     <FormProvider {...formMethods}>
-      <form
-        className="mt-10"
-        onSubmit={handleSubmit(onSubmit)}
-      >
+      <form onSubmit={handleSubmit(onSubmit)}>
         <div className="grid gap-y-16">
           <BoardEditWebtoonSearch />
           <BoardEditFormTitle />
