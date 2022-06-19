@@ -21,7 +21,7 @@ export default function Layout({ header, sidebar, footer }: Props) {
       <Suspense fallback={<LinearProgress />}>
         <div className="flex mt-10">
           {sidebar && <Sidebar />}
-          <div className={classname('flex-1 min-h-[calc(100vh_-_80px_-_120px)] px-10', {
+          <div className={classname('flex-1 min-h-[calc(100vh_-_84px_-_120px_-_2.5rem)] px-10', {
             'pb-28': header && footer,
           })}
           >
