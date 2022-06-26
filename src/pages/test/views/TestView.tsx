@@ -10,7 +10,7 @@ export default function Test() {
       <button
         type="button"
         className="px-4 py-2 border-2"
-        onClick={() => setUrl('string')}
+        onClick={() => setUrl('test')}
       >
         /api/test/&#123;string&#125; 요청
       </button>

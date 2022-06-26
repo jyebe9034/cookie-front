@@ -6,10 +6,11 @@ interface Props {
 
 export default function useTest({ url }: Props) {
   return useQuery(
-    'test-string',
+    ['test-string', url],
     async () => {
-      const response = await fetch(`http://13.124.81.241:8080/api/test/${url}`);
-      return response.json();
+      const response = await fetch(`http://www.tumuto.kr/api/test/${url}`);
+      const data = await response.json();
+      return data;
     },
     {
       enabled: url !== null,

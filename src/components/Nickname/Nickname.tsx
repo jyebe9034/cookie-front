@@ -3,7 +3,7 @@ import { useFormContext } from 'react-hook-form';
 
 import Input from '@mui/material/Input';
 
-export default function JoinNickname() {
+export default function Nickname() {
   const { register } = useFormContext();
 
   return (

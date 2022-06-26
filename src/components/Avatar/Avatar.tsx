@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { useFormContext } from 'react-hook-form';
 import classnames from 'classnames';
 
-import Avatar from '@mui/material/Avatar';
+import DefaultAvatar from '@mui/material/Avatar';
 import IconCancel from '@mui/icons-material/Cancel';
 
-export default function JoinAvatar() {
+export default function Avatar() {
   const { register, watch, setValue } = useFormContext();
   const avatar = watch('avatar');
 
@@ -35,7 +35,7 @@ export default function JoinAvatar() {
           onMouseEnter={() => setIsShownAvatarUploadButton(true)}
           onMouseLeave={() => setIsShownAvatarUploadButton(false)}
         >
-          <Avatar
+          <DefaultAvatar
             src={typeof avatarPreview === 'string' ? avatarPreview : undefined}
             sx={{
               width: '100px',

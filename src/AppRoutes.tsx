@@ -11,6 +11,7 @@ const MainView = lazy(() => import('pages/main/views/MainView'));
 const BoardListView = lazy(() => import('pages/board/views/BoardListView'));
 const BoardDetailView = lazy(() => import('pages/board/views/BoardDetailView'));
 const BoardEditView = lazy(() => import('pages/board/views/BoardEditView'));
+const MyPageView = lazy(() => import('pages/my-page/views/MyPageView'));
 
 export default function AppRoutes() {
   return (
@@ -27,6 +28,9 @@ export default function AppRoutes() {
           <Route path="/board/:postId" element={<BoardDetailView />} />
           <Route path="/board/add" element={<BoardEditView />} />
           <Route path="/board/:postId/edit" element={<BoardEditView />} />
+        </Route>
+        <Route path="/" element={<Layout header sidebar footer />}>
+          <Route path="/my-page" element={<MyPageView />} />
         </Route>
       </Routes>
     </BrowserRouter>

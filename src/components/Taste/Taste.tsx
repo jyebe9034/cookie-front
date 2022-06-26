@@ -3,7 +3,7 @@ import { useFormContext } from 'react-hook-form';
 
 import Checkbox from 'components/Checkbox';
 
-export default function JoinTaste() {
+export default function Taste() {
   const { register } = useFormContext();
 
   return (

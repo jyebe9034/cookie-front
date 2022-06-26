@@ -9,7 +9,7 @@ export default function BoardListView() {
   const navigate = useNavigate();
 
   return (
-    <div className="mt-10">
+    <>
       <div className="flex items-center justify-between pb-4 border-b">
         <h2 className="text-3xl font-bold text-gray-700">
           게시판
@@ -32,6 +32,6 @@ export default function BoardListView() {
         <PostItem />
         <PostItem />
       </div>
-    </div>
+    </>
   );
 }
