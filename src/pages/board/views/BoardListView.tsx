@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import Button from '@mui/material/Button';
 
 import PostItem from 'components/PostItem';
+import BoardSearch from '../components/BoardSearch';
 
 export default function BoardListView() {
   const navigate = useNavigate();
@@ -14,15 +15,18 @@ export default function BoardListView() {
         <h2 className="text-3xl font-bold text-gray-700">
           게시판
         </h2>
-        <Button
-          type="button"
-          size="large"
-          variant="contained"
-          disableElevation
-          onClick={() => navigate('/board/add')}
-        >
-          작성하기
-        </Button>
+        <div className="flex items-center gap-x-12">
+          <BoardSearch />
+          <Button
+            type="button"
+            size="large"
+            variant="contained"
+            disableElevation
+            onClick={() => navigate('/board/add')}
+          >
+            작성하기
+          </Button>
+        </div>
       </div>
 
       <div className="grid gap-y-4 mt-10">
