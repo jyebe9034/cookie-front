@@ -13,7 +13,7 @@ export default function UserInfoProfile() {
         </p>
       </div>
       <Button
-        href="/"
+        href="/my-page"
         size="small"
         variant="outlined"
         disableElevation

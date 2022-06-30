@@ -3,9 +3,9 @@ import { useForm, FormProvider } from 'react-hook-form';
 
 import Button from '@mui/material/Button';
 
-import JoinAvatar from '../components/JoinAvatar';
-import JoinNickname from '../components/JoinNickname';
-import JoinTaste from '../components/JoinTaste';
+import Avatar from 'components/Avatar';
+import Nickname from 'components/Nickname';
+import Taste from 'components/Taste';
 
 interface Data {
   avatar: FileList | null;
@@ -48,9 +48,9 @@ export default function JoinView() {
             onSubmit={handleSubmit(onSubmit)}
           >
             <div className="grid gap-y-28">
-              <JoinAvatar />
-              <JoinNickname />
-              <JoinTaste />
+              <Avatar />
+              <Nickname />
+              <Taste />
             </div>
             <Button
               type="submit"

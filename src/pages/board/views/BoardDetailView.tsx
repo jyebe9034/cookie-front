@@ -10,7 +10,7 @@ import BoardDetailUtils from '../components/BoardDetailUtils';
 export default function BoardDetailView() {
   return (
     <>
-      <div className="mt-10 pb-7 border-b">
+      <div className="pb-7 border-b">
         <BoardDetailTitle />
         <BoardDetailInfo />
       </div>
