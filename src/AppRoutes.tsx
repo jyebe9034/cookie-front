@@ -10,6 +10,7 @@ const BoardListView = lazy(() => import('pages/board/views/BoardListView'));
 const BoardDetailView = lazy(() => import('pages/board/views/BoardDetailView'));
 const BoardEditView = lazy(() => import('pages/board/views/BoardEditView'));
 const MyPageView = lazy(() => import('pages/my-page/views/MyPageView'));
+const MyBoardView = lazy(() => import('pages/my-board/views/MyBoardView'));
 
 export default function AppRoutes() {
   return (
@@ -28,6 +29,7 @@ export default function AppRoutes() {
         </Route>
         <Route path="/" element={<Layout header sidebar footer />}>
           <Route path="/my-page" element={<MyPageView />} />
+          <Route path="/my-board" element={<MyBoardView />} />
         </Route>
       </Routes>
     </BrowserRouter>

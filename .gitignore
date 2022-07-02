@@ -11,3 +11,7 @@ node_modules
 
 # Misc
 .DS_Store
+/.idea/cookie-front.iml
+/.idea/modules.xml
+/.idea/inspectionProfiles/Project_Default.xml
+/.idea/vcs.xml
