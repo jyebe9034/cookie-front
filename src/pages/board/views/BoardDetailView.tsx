@@ -1,7 +1,7 @@
 import React from 'react';
 
 import CommentItem from 'components/CommentItem';
-import CommentEdit from 'components/CommentItem/CommentEdit';
+import CommentEditor from 'components/CommentItem/CommentEditor';
 import BoardDetailTitle from '../components/BoardDetailTitle';
 import BoardDetailInfo from '../components/BoardDetailInfo';
 import BoardDetailContent from '../components/BoardDetailContent';
@@ -29,7 +29,7 @@ export default function BoardDetailView() {
         <CommentItem />
       </div>
       <div className="grid mt-3">
-        <CommentEdit />
+        <CommentEditor />
       </div>
     </>
   );

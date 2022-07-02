@@ -2,14 +2,14 @@ import React from 'react';
 
 import Button from '@mui/material/Button';
 
-import ProfileThumbnail from 'components/ProfileThumbnail';
+import Avatar from '@mui/material/Avatar';
 import CommentItemInfo from './CommentItemInfo';
 
 export default function CommentItem() {
   return (
     <div className="flex items-center p-3 rounded-lg transition-colors">
       <div className="flex items-center p-3">
-        <ProfileThumbnail />
+        <Avatar sx={{ width: 50, height: 50 }} />
       </div>
       <CommentItemInfo />
       <Button
