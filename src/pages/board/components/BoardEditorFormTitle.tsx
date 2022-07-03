@@ -3,7 +3,7 @@ import { useFormContext } from 'react-hook-form';
 
 import Input from '@mui/material/Input';
 
-export default function BoardEditFormTitle() {
+export default function BoardEditorFormTitle() {
   const { register } = useFormContext();
 
   return (

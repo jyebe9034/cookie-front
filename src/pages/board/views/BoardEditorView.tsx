@@ -13,7 +13,7 @@ interface FormData {
   content: string;
 }
 
-export default function BoardEditView() {
+export default function BoardEditorView() {
   const formMethods = useForm({
     defaultValues: {
       webtoon: '',

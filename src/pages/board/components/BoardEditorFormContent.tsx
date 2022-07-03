@@ -5,7 +5,7 @@ import '@toast-ui/editor/dist/toastui-editor.css';
 
 import './ToastUIEditor.css';
 
-export default function BoardEditFormContent() {
+export default function BoardEditorFormContent() {
   const editorRef = useRef(null);
   const { control } = useFormContext();
 

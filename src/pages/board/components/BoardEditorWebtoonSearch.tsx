@@ -8,7 +8,7 @@ import ClickAwayListener from '@mui/material/ClickAwayListener';
 
 import BoardEditWebtoonSearchPopup from './BoardEditWebtoonSearchPopup';
 
-export default function BoardEditWebtoonSearch() {
+export default function BoardEditorWebtoonSearch() {
   const { control, watch } = useFormContext();
   const selectedWebtoon = !!watch('webtoon');
 

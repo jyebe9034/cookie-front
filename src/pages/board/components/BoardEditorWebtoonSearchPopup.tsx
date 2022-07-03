@@ -8,7 +8,7 @@ interface Props {
   onSelectWebtoon(value: string): void;
 }
 
-export default function BoardEditWebtoonSearchPopup({ isOpened, onSelectWebtoon }: Props) {
+export default function BoardEditorWebtoonSearchPopup({ isOpened, onSelectWebtoon }: Props) {
   return (
     <div className={classNames('overflow-y-auto absolute left-0 w-full max-h-[450px] bg-white rounded-lg shadow-xl transition-all', {
       '-z-10': !isOpened,
