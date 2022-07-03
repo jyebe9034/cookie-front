@@ -5,7 +5,7 @@ import Webtoon from 'components/Webtoon';
 
 interface Props {
   isOpened: boolean;
-  onSelectWebtoon(value: string): void;
+  onSelectWebtoon(value: number): void;
 }
 
 export default function BoardEditorWebtoonSearchPopup({ isOpened, onSelectWebtoon }: Props) {
@@ -22,21 +22,21 @@ export default function BoardEditorWebtoonSearchPopup({ isOpened, onSelectWebtoo
       <button
         type="button"
         className="w-full transition-colors hover:bg-gray-100"
-        onClick={() => onSelectWebtoon('1')}
+        onClick={() => onSelectWebtoon(1)}
       >
         <Webtoon hasUtils={false} />
       </button>
       <button
         type="button"
         className="w-full transition-colors hover:bg-gray-100"
-        onClick={() => onSelectWebtoon('2')}
+        onClick={() => onSelectWebtoon(2)}
       >
         <Webtoon hasUtils={false} />
       </button>
       <button
         type="button"
         className="w-full transition-colors hover:bg-gray-100"
-        onClick={() => onSelectWebtoon('3')}
+        onClick={() => onSelectWebtoon(3)}
       >
         <Webtoon hasUtils={false} />
       </button>

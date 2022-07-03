@@ -10,7 +10,7 @@ import BoardEditorWebtoonSearchPopup from './BoardEditorWebtoonSearchPopup';
 
 export default function BoardEditorWebtoonSearch() {
   const { control, watch } = useFormContext();
-  const selectedWebtoon = !!watch('webtoon');
+  const selectedWebtoon = !!watch('webtoonSeq');
 
   const [isOpenedPopup, setIsOpenedPopup] = useState(false);
 
@@ -23,7 +23,7 @@ export default function BoardEditorWebtoonSearch() {
         <div className="inline-flex items-center gap-x-2 mt-[15px]">
           <div className="relative w-[500px]">
             <Controller
-              name="webtoon"
+              name="webtoonSeq"
               control={control}
               render={({ field }) => (
                 <>
@@ -32,11 +32,11 @@ export default function BoardEditorWebtoonSearch() {
                     sx={{ fontSize: '1.25rem' }}
                     placeholder="웹툰 이름을 입력해 주세요"
                     value={field.value}
-                    onChange={(event) => field.onChange(event.target.value)}
+                    onChange={(event) => field.onChange(Number(event.target.value))}
                   />
                   <BoardEditorWebtoonSearchPopup
                     isOpened={isOpenedPopup}
-                    onSelectWebtoon={(value: string) => {
+                    onSelectWebtoon={(value: number) => {
                       field.onChange(value);
                       setIsOpenedPopup(false);
                     }}
