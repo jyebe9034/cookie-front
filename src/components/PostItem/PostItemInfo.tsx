@@ -14,7 +14,7 @@ export default function PostItemInfo({ post }: Props) {
     <div className="grid flex-1 gap-y-3">
       <div className="flex gap-x-2">
         <Tag name="네이버" />
-        <Tag name="드라마" />
+        <Tag name={post.genre} />
       </div>
 
       <p className="text-lg truncate">
