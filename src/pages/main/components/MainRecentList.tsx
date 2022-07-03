@@ -9,11 +9,11 @@ export default function MainRecentList() {
         오늘의 신규 달글
       </h3>
       <div className="grid gap-y-4 mt-10">
+        {/* <PostItem />
         <PostItem />
         <PostItem />
         <PostItem />
-        <PostItem />
-        <PostItem />
+        <PostItem /> */}
       </div>
     </div>
   );

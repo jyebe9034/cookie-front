@@ -11,7 +11,7 @@ interface Props {
 export default function Webtoon({ hasUtils }: Props) {
   return (
     <div className="flex items-center p-4">
-      <WebtoonThumbnail />
+      {/* <WebtoonThumbnail /> */}
       <div className="flex flex-col gap-y-1 overflow-hidden ml-3">
         <WebtoonInfo />
         {hasUtils && <WebtoonUtils />}
