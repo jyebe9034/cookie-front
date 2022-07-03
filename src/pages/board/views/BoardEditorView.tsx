@@ -3,9 +3,9 @@ import { useForm, FormProvider } from 'react-hook-form';
 
 import Button from '@mui/material/Button';
 
-import BoardEditWebtoonSearch from '../components/BoardEditWebtoonSearch';
-import BoardEditFormTitle from '../components/BoardEditFormTitle';
-import BoardEditFormContent from '../components/BoardEditFormContent';
+import BoardEditorWebtoonSearch from '../components/BoardEditorWebtoonSearch';
+import BoardEditorFormTitle from '../components/BoardEditorFormTitle';
+import BoardEditorFormContent from '../components/BoardEditorFormContent';
 
 interface FormData {
   webtoon: string;
@@ -33,9 +33,9 @@ export default function BoardEditorView() {
     <FormProvider {...formMethods}>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="grid gap-y-16">
-          <BoardEditWebtoonSearch />
-          <BoardEditFormTitle />
-          <BoardEditFormContent />
+          <BoardEditorWebtoonSearch />
+          <BoardEditorFormTitle />
+          <BoardEditorFormContent />
         </div>
         <div className="flex justify-end mt-8">
           <Button

@@ -6,7 +6,7 @@ import Input from '@mui/material/Input';
 import IconSearch from '@mui/icons-material/Search';
 import ClickAwayListener from '@mui/material/ClickAwayListener';
 
-import BoardEditWebtoonSearchPopup from './BoardEditWebtoonSearchPopup';
+import BoardEditorWebtoonSearchPopup from './BoardEditorWebtoonSearchPopup';
 
 export default function BoardEditorWebtoonSearch() {
   const { control, watch } = useFormContext();
@@ -34,7 +34,7 @@ export default function BoardEditorWebtoonSearch() {
                     value={field.value}
                     onChange={(event) => field.onChange(event.target.value)}
                   />
-                  <BoardEditWebtoonSearchPopup
+                  <BoardEditorWebtoonSearchPopup
                     isOpened={isOpenedPopup}
                     onSelectWebtoon={(value: string) => {
                       field.onChange(value);
