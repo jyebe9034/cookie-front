@@ -5,7 +5,7 @@ import '@toast-ui/editor/dist/toastui-editor.css';
 
 import './ToastUIEditor.css';
 
-export default function BoardEditFormContent() {
+export default function BoardEditorFormContents() {
   const editorRef = useRef(null);
   const { control } = useFormContext();
 
@@ -21,7 +21,7 @@ export default function BoardEditFormContent() {
       </p>
       <div className="toastui-editor-box mt-[15px] text-lg">
         <Controller
-          name="content"
+          name="contents"
           control={control}
           render={({ field }) => (
             <Editor

@@ -11,6 +11,7 @@ export default function MyBoardView() {
         </h2>
       </div>
       <div className="grid gap-y-4 mt-10">
+        {/* <PostItem />
         <PostItem />
         <PostItem />
         <PostItem />
@@ -19,8 +20,7 @@ export default function MyBoardView() {
         <PostItem />
         <PostItem />
         <PostItem />
-        <PostItem />
-        <PostItem />
+        <PostItem /> */}
       </div>
     </>
   );

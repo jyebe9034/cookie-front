@@ -6,8 +6,11 @@ import Button from '@mui/material/Button';
 import PostItem from 'components/PostItem';
 import BoardSearch from '../components/BoardSearch';
 
+import usePosts from '../hooks/queries/usePosts';
+
 export default function BoardListView() {
   const navigate = useNavigate();
+  const { data: posts } = usePosts();
 
   return (
     <>
@@ -30,11 +33,12 @@ export default function BoardListView() {
       </div>
 
       <div className="grid gap-y-4 mt-10">
-        <PostItem />
-        <PostItem />
-        <PostItem />
-        <PostItem />
-        <PostItem />
+        {posts?.map((post) => (
+          <PostItem
+            key={post.boardSeq}
+            post={post}
+          />
+        ))}
       </div>
     </>
   );

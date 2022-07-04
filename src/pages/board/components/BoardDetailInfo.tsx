@@ -11,7 +11,7 @@ export default function BoardDetailInfo() {
       <div>
         <p>유저 닉네임</p>
         <div className="flex items-center gap-x-4">
-          <PostInfo />
+          {/* <PostInfo /> */}
         </div>
       </div>
     </div>

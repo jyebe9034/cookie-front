@@ -9,11 +9,11 @@ export default function MainPopularList() {
         오늘의 인기 달글 TOP 5
       </h3>
       <div className="grid gap-y-4 mt-10">
+        {/* <PostItem />
         <PostItem />
         <PostItem />
         <PostItem />
-        <PostItem />
-        <PostItem />
+        <PostItem /> */}
       </div>
     </div>
   );

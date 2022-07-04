@@ -3,19 +3,28 @@ import { Link } from 'react-router-dom';
 
 import Button from '@mui/material/Button';
 
+import { Post } from 'types/Post';
+
 import WebtoonThumbnail from 'components/WebtoonThumbnail';
 
 import PostItemInfo from './PostItemInfo';
 
-export default function PostItem() {
+interface Props {
+  post: Post;
+}
+
+export default function PostItem({ post }: Props) {
   return (
     <div className="flex items-center p-5 rounded-lg transition-colors hover:bg-gray-100">
       <Link
-        to="/board/1"
+        to={`/board/${post.boardSeq}`}
         className="flex flex-1 items-center gap-x-5 mr-6"
       >
-        <WebtoonThumbnail size="large" />
-        <PostItemInfo />
+        <WebtoonThumbnail
+          size="large"
+          src={post?.thumbnailPath}
+        />
+        <PostItemInfo post={post} />
       </Link>
       <Button
         type="button"
