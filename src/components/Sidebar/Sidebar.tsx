@@ -14,7 +14,7 @@ export default function Sidebar() {
       </li>
       <li>
         <Link
-          to="/"
+          to="/my-board"
           className="block p-2 text-xl hover:text-red-500 transition-colors"
         >
 
