@@ -11,3 +11,13 @@ export interface Post {
   commentCount: number;
   genre: string;
 }
+
+interface BestPost extends Post {
+  seq: number;
+  webtoonSeq: number;
+}
+
+export interface BestPosts {
+  bestBoardList: BestPost[];
+  newBoardList: BestPost[];
+}
