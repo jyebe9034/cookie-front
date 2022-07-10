@@ -2,6 +2,8 @@ export interface Post {
   boardSeq: number;
   thumbnailPath: string;
   title: string;
+  contents?: string;
+  writer?: number;
   nickname: string;
   createDate: string;
   readCount: number;

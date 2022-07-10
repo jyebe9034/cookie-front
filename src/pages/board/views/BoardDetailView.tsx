@@ -1,13 +1,23 @@
 import React from 'react';
+import { useParams } from 'react-router-dom';
 
 import CommentItem from 'components/CommentItem';
 import CommentEditor from 'components/CommentItem/CommentEditor';
+
+import usePost from '../hooks/queries/usePost';
+
 import BoardDetailTitle from '../components/BoardDetailTitle';
 import BoardDetailInfo from '../components/BoardDetailInfo';
 import BoardDetailContent from '../components/BoardDetailContent';
 import BoardDetailUtils from '../components/BoardDetailUtils';
 
 export default function BoardDetailView() {
+  const { postId } = useParams();
+  const { data } = usePost(
+    { id: postId },
+    { suspense: true },
+  );
+
   return (
     <>
       <div className="pb-7 border-b">
