@@ -1,7 +1,7 @@
 import React from 'react';
 
 import BoardDetailLikeButton from './BoardDetailLikeButton';
-import BoardDetailRemoveButton from './BoardDetailRemoveButton';
+import BoardDetailDeleteButton from './BoardDetailDeleteButton';
 import BoardDetailEditButton from './BoardDetailEditButton';
 
 export default function BoardDetailUtils() {
@@ -10,7 +10,7 @@ export default function BoardDetailUtils() {
       <BoardDetailLikeButton />
       <div className="flex gap-x-2">
         <BoardDetailEditButton />
-        <BoardDetailRemoveButton />
+        <BoardDetailDeleteButton />
       </div>
     </div>
   );

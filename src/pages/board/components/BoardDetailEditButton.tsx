@@ -1,9 +1,11 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
+
 import Button from '@mui/material/Button';
 
 export default function BoardDetailEditButton() {
   const navigate = useNavigate();
+  const { postId } = useParams();
 
   return (
     <Button
@@ -12,7 +14,7 @@ export default function BoardDetailEditButton() {
       color="secondary"
       disableElevation
       sx={{ width: '100px' }}
-      onClick={() => navigate('/board')}
+      onClick={() => navigate(`/board/${postId}`)}
     >
       수정
     </Button>
