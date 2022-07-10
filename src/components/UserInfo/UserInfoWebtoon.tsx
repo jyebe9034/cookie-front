@@ -9,11 +9,11 @@ export default function UserInfoWebtoon() {
         내 취향 웹툰
       </p>
       <div className="overflow-y-auto h-80 divide-y">
+        {/* <Webtoon />
         <Webtoon />
         <Webtoon />
         <Webtoon />
-        <Webtoon />
-        <Webtoon />
+        <Webtoon /> */}
       </div>
     </>
   );

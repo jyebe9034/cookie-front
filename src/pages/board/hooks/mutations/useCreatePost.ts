@@ -1,7 +1,7 @@
 import { useMutation } from 'react-query';
 
 export interface Params {
-  webtoonSeq: number;
+  webtoonSeq: number | null;
   title: string;
   contents: string;
   userSeq: number;
