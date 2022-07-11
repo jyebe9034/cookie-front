@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import Button from '@mui/material/Button';
 
 import PostItem from 'components/PostItem';
-import BoardSearch from '../components/BoardSearch';
+import BoardListSearch from '../components/BoardListSearch';
 
 import usePosts from '../hooks/queries/usePosts';
 
@@ -19,7 +19,7 @@ export default function BoardListView() {
           게시판
         </h2>
         <div className="flex items-center gap-x-12">
-          <BoardSearch />
+          <BoardListSearch />
           <Button
             type="button"
             size="large"

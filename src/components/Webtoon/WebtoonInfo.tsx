@@ -1,15 +1,23 @@
 import React from 'react';
 
-export default function WebtoonInfo() {
+import { Webtoon } from 'types/Webtoon';
+
+interface Props {
+  webtoon: Webtoon;
+}
+
+export default function WebtoonInfo({ webtoon }: Props) {
   return (
     <ul className="flex">
       <li className="flex overflow-hidden after:content-['/'] after:block after:mx-1.5">
         <p className="truncate">
-          세상에서 가장 긴 웹툰 제목입니다. 세상에서 가장 긴 웹툰 제목입니다.
+          {webtoon.title}
         </p>
       </li>
       <li className="shrink-0">
-        <p>장르 이름</p>
+        <p>
+          {webtoon.genre}
+        </p>
       </li>
     </ul>
   );

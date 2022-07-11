@@ -1,16 +1,13 @@
 import { useMutation } from 'react-query';
 
-export interface Params {
-  webtoonSeq: number | null;
-  title: string;
-  contents: string;
-  userSeq: number;
+interface Params {
+  boardSeq?: string;
 }
 
-export default function useCreatePost() {
+export default function useLikePost() {
   return useMutation((data: Params) => {
     return fetch(
-      '/api/board',
+      '/api/board/like',
       {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },

@@ -1,58 +1,57 @@
-import React, { useState } from 'react';
-import { useFormContext, Controller } from 'react-hook-form';
-import classNames from 'classnames';
+import React, { useRef, useState } from 'react';
+import { useFormContext } from 'react-hook-form';
 
 import Input from '@mui/material/Input';
 import IconSearch from '@mui/icons-material/Search';
 import ClickAwayListener from '@mui/material/ClickAwayListener';
 
+import useWebtoons from '../hooks/queries/useWebtoons';
+
 import BoardEditorWebtoonSearchPopup from './BoardEditorWebtoonSearchPopup';
 
 export default function BoardEditorWebtoonSearch() {
-  const { control, watch } = useFormContext();
-  const selectedWebtoon = !!watch('webtoonSeq');
+  const inputRef = useRef(null);
+  const { setValue } = useFormContext();
 
-  const [isOpenedPopup, setIsOpenedPopup] = useState(false);
+  const [title, setTitle] = useState('');
+  const [isOpenedWebtoonSearchPopup, setIsOpenedWebtoonSearchPopup] = useState(false);
+
+  const { data: webtoons } = useWebtoons({ title });
+
+  const handleSearchWebtoons = () => {
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
+    setTitle(inputRef.current?.value ?? '');
+    setIsOpenedWebtoonSearchPopup(true);
+  };
 
   return (
     <section className="w-full">
       <p className="flex items-center text-xl">
         웹툰 검색
       </p>
-      <ClickAwayListener onClickAway={() => setIsOpenedPopup(false)}>
+      <ClickAwayListener onClickAway={() => setIsOpenedWebtoonSearchPopup(false)}>
         <div className="inline-flex items-center gap-x-2 mt-[15px]">
           <div className="relative w-[500px]">
-            <Controller
-              name="webtoonSeq"
-              control={control}
-              render={({ field }) => (
-                <>
-                  <Input
-                    fullWidth
-                    sx={{ fontSize: '1.25rem' }}
-                    placeholder="웹툰 이름을 입력해 주세요"
-                    value={field.value}
-                    onChange={(event) => field.onChange(Number(event.target.value))}
-                  />
-                  <BoardEditorWebtoonSearchPopup
-                    isOpened={isOpenedPopup}
-                    onSelectWebtoon={(value: number) => {
-                      field.onChange(value);
-                      setIsOpenedPopup(false);
-                    }}
-                  />
-                </>
-              )}
+            <Input
+              inputRef={inputRef}
+              fullWidth
+              sx={{ fontSize: '1.25rem' }}
+              placeholder="웹툰 이름을 입력해 주세요"
+            />
+            <BoardEditorWebtoonSearchPopup
+              isOpened={isOpenedWebtoonSearchPopup}
+              webtoons={webtoons}
+              onSelectWebtoon={(value: number) => {
+                setValue('webtoonSeq', value);
+                setIsOpenedWebtoonSearchPopup(false);
+              }}
             />
           </div>
           <button
             type="button"
-            className={classNames('flex items-center justify-center w-9 h-9 bg-gray-100 rounded-md text-gray-400 transition-colors', {
-              'hover:bg-gray-200': !!selectedWebtoon,
-              'hover:text-gray-500': !!selectedWebtoon,
-            })}
-            disabled={!selectedWebtoon}
-            onClick={() => setIsOpenedPopup(!isOpenedPopup)}
+            className="flex items-center justify-center w-9 h-9 bg-gray-100 rounded-md text-gray-400 transition-colors"
+            onClick={handleSearchWebtoons}
           >
             <IconSearch />
           </button>

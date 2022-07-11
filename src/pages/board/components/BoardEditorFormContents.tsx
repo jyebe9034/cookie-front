@@ -3,15 +3,24 @@ import { useFormContext, Controller } from 'react-hook-form';
 import { Editor } from '@toast-ui/react-editor';
 import '@toast-ui/editor/dist/toastui-editor.css';
 
+import useUploadImage from '../hooks/mutations/useUploadImage';
+
 import './ToastUIEditor.css';
+
+type HookCallback = (url: string, text?: string) => void;
 
 export default function BoardEditorFormContents() {
   const editorRef = useRef(null);
   const { control } = useFormContext();
+  const { mutate } = useUploadImage();
 
-  const addImageBlobHook = (file: Blob | File) => {
+  const addImageBlobHook = (blob: Blob | File, callback: HookCallback) => {
     const formData = new FormData();
-    formData.append('contentImage', file);
+    formData.append('contentImage', blob);
+    mutate(
+      formData,
+      // { onSuccess: () => callback() }
+    );
   };
 
   return (

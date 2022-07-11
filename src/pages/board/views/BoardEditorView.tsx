@@ -16,7 +16,7 @@ export default function BoardEditorView() {
 
   const formMethods = useForm({
     defaultValues: {
-      webtoonSeq: 1,
+      webtoonSeq: null,
       title: '',
       contents: '',
       userSeq: 1, // 임시 유저 seq
@@ -35,10 +35,11 @@ export default function BoardEditorView() {
   }, [formValues]);
 
   const onSubmit = (data: FormData) => {
-    createMutate(
-      data,
-      { onSuccess: () => queryClient.invalidateQueries(['posts']) },
-    );
+    console.log(data);
+    // createMutate(
+    //   data,
+    //   { onSuccess: () => queryClient.invalidateQueries(['posts']) },
+    // );
   };
 
   return (
