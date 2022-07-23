@@ -1,5 +1,7 @@
 import { useMutation } from 'react-query';
 
+import fetch from 'lib/fetch';
+
 export interface Params {
   webtoonSeq: number | null;
   title: string;
@@ -13,7 +15,6 @@ export default function useCreatePost() {
       '/api/board',
       {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),
       },
     );

@@ -1,5 +1,7 @@
 import { useQuery, UseQueryOptions } from 'react-query';
 
+import fetch from 'lib/fetch';
+
 import { Response } from 'types/Response';
 import { Post } from 'types/Post';
 

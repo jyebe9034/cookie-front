@@ -1,5 +1,7 @@
 import { useMutation } from 'react-query';
 
+import fetch from 'lib/fetch';
+
 interface Params {
   boardSeq?: string;
 }
@@ -10,7 +12,6 @@ export default function useLikePost() {
       '/api/board/like',
       {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),
       },
     );

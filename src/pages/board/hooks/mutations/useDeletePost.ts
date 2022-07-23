@@ -1,5 +1,7 @@
 import { useMutation } from 'react-query';
 
+import fetch from 'lib/fetch';
+
 interface Params {
   id?: string;
 }

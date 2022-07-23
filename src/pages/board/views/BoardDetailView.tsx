@@ -18,6 +18,8 @@ export default function BoardDetailView() {
     { suspense: true },
   );
 
+  console.log(data);
+
   return (
     <>
       <div className="pb-7 border-b">
