@@ -8,7 +8,7 @@ import usePost from '../hooks/queries/usePost';
 
 import BoardDetailTitle from '../components/BoardDetailTitle';
 import BoardDetailInfo from '../components/BoardDetailInfo';
-import BoardDetailContent from '../components/BoardDetailContent';
+import BoardDetailContents from '../components/BoardDetailContents';
 import BoardDetailUtils from '../components/BoardDetailUtils';
 
 export default function BoardDetailView() {
@@ -28,7 +28,7 @@ export default function BoardDetailView() {
         <BoardDetailInfo post={data?.board} />
       </div>
       <div className="min-h-[600px] mt-7">
-        <BoardDetailContent content={data?.board.contents} />
+        <BoardDetailContents contents={data?.board.contents} />
       </div>
       <div className="mt-7 pt-4 border-t">
         <BoardDetailUtils

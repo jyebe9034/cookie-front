@@ -1,9 +1,11 @@
 import React, { useEffect, useMemo } from 'react';
 import { useForm, FormProvider } from 'react-hook-form';
 import { useQueryClient } from 'react-query';
+import { useNavigate, useParams } from 'react-router-dom';
 
 import Button from '@mui/material/Button';
 
+import usePost from '../hooks/queries/usePost';
 import useCreatePost, { Params as FormData } from '../hooks/mutations/useCreatePost';
 
 import BoardEditorWebtoonSearch from '../components/BoardEditorWebtoonSearch';
@@ -11,23 +13,31 @@ import BoardEditorFormTitle from '../components/BoardEditorFormTitle';
 import BoardEditorFormContents from '../components/BoardEditorFormContents';
 
 export default function BoardEditorView() {
+  const navigate = useNavigate();
+  const { postId } = useParams();
+
   const queryClient = useQueryClient();
-  const { mutate: createMutate } = useCreatePost();
+  const { data: post } = usePost(
+    { id: postId },
+    { suspense: true },
+  );
+  const { mutate } = useCreatePost();
 
   const formMethods = useForm({
     defaultValues: {
       webtoonSeq: null,
       title: '',
       contents: '',
-      userSeq: 1, // 임시 유저 seq
     },
   });
-  const { watch, register, handleSubmit } = formMethods;
+  const { watch, reset, handleSubmit } = formMethods;
   const formValues = watch();
 
   useEffect(() => {
-    register('userSeq');
-  }, []);
+    if (post?.board) {
+      reset(post.board);
+    }
+  }, [post?.board]);
 
   const isDisabledSubmitButton = useMemo(() => {
     const formKeys = Object.keys(formValues) as Array<keyof typeof formValues>;
@@ -35,11 +45,16 @@ export default function BoardEditorView() {
   }, [formValues]);
 
   const onSubmit = (data: FormData) => {
-    console.log(data);
-    // createMutate(
-    //   data,
-    //   { onSuccess: () => queryClient.invalidateQueries(['posts']) },
-    // );
+    mutate(
+      data,
+      {
+        onSuccess: async (response: any) => {
+          const { boardSeq } = await response.json();
+          queryClient.removeQueries(['posts']);
+          navigate(`/board/${boardSeq}`);
+        },
+      },
+    );
   };
 
   return (

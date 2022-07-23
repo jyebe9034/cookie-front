@@ -6,7 +6,6 @@ export interface Params {
   webtoonSeq: number | null;
   title: string;
   contents: string;
-  userSeq: number;
 }
 
 export default function useCreatePost() {

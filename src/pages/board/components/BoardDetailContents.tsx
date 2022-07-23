@@ -4,13 +4,13 @@ import { Viewer } from '@toast-ui/react-editor';
 import './ToastUIEditor.css';
 
 interface Props {
-  content?: string;
+  contents?: string;
 }
 
-export default function BoardDetailContent({ content }: Props) {
+export default function BoardDetailContents({ contents }: Props) {
   return (
     <div className="toastui-editor-box">
-      <Viewer initialValue={content} />
+      <Viewer initialValue={contents} />
     </div>
   );
 }
