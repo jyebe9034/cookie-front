@@ -10,7 +10,7 @@ import useWebtoons from '../hooks/queries/useWebtoons';
 import BoardEditorWebtoonSearchPopup from './BoardEditorWebtoonSearchPopup';
 
 export default function BoardEditorWebtoonSearch() {
-  const inputRef = useRef(null);
+  const inputRef = useRef<HTMLInputElement>(null);
   const { setValue } = useFormContext();
 
   const [title, setTitle] = useState('');
@@ -19,8 +19,6 @@ export default function BoardEditorWebtoonSearch() {
   const { data: webtoons } = useWebtoons({ title });
 
   const handleSearchWebtoons = () => {
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
     setTitle(inputRef.current?.value ?? '');
     setIsOpenedWebtoonSearchPopup(true);
   };

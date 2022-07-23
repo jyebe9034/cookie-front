@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import Button from '@mui/material/Button';
@@ -10,7 +10,10 @@ import usePosts from '../hooks/queries/usePosts';
 
 export default function BoardListView() {
   const navigate = useNavigate();
-  const { data: posts } = usePosts({ title: '' });
+
+  const [title, setTitle] = useState('');
+
+  const { data: posts } = usePosts({ title });
 
   return (
     <>
@@ -19,7 +22,7 @@ export default function BoardListView() {
           게시판
         </h2>
         <div className="flex items-center gap-x-12">
-          <BoardListSearch />
+          <BoardListSearch onSetTitle={setTitle} />
           <Button
             type="button"
             size="large"

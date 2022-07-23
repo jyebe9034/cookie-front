@@ -14,7 +14,7 @@ export default function usePosts(
   options?: UseQueryOptions<Response<Post[]>, unknown, Post[], Array<string>>,
 ) {
   return useQuery(
-    ['posts'],
+    ['posts', title],
     async () => {
       const response = await fetch(`/api/board?title=${title}`);
       return response.json();
