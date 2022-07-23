@@ -3,7 +3,7 @@ import { useQuery, UseQueryOptions } from 'react-query';
 import fetch from 'lib/fetch';
 
 import { Response } from 'types/Response';
-import { Post } from 'types/Post';
+import { PostDetail } from 'types/Post';
 
 interface Params {
   id?: string;
@@ -11,7 +11,7 @@ interface Params {
 
 export default function usePost(
   { id }: Params,
-  options?: UseQueryOptions<Response<Post>, unknown, Post, Array<string>>,
+  options?: UseQueryOptions<Response<PostDetail>, unknown, PostDetail, Array<string>>,
 ) {
   return useQuery(
     ['post', String(id)],

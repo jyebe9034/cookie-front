@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useParams } from 'react-router-dom';
 import { useQueryClient } from 'react-query';
 import classNames from 'classnames';
@@ -8,22 +8,32 @@ import IconFavoriteBorder from '@mui/icons-material/FavoriteBorder';
 
 import useLikePost from '../hooks/mutations/useLikePost';
 
-export default function BoardDetailLikeButton() {
-  const { postId } = useParams();
+export interface Props {
+  isLiked?: boolean;
+  likeCount?: number;
+}
 
-  const [isLiked, setIsLiked] = useState(false);
+export default function BoardDetailLikeButton({ isLiked, likeCount }: Props) {
+  const { postId } = useParams();
 
   const queryClient = useQueryClient();
   const { mutate } = useLikePost();
 
-  // const handleLikePost = () => {
-  //   mutate({ boardSeq: postId });
-  // };
+  const handleLikePost = () => {
+    mutate(
+      { boardSeq: postId },
+      {
+        onSuccess: () => {
+          queryClient.invalidateQueries(['post', postId]);
+        },
+      },
+    );
+  };
 
   return (
     <button
       type="button"
-      onClick={() => setIsLiked(!isLiked)}
+      onClick={handleLikePost}
     >
       <p className={classNames('flex items-center gap-x-1.5 text-lg font-medium', {
         'text-gray-400': !isLiked,
@@ -31,7 +41,7 @@ export default function BoardDetailLikeButton() {
       })}
       >
         {isLiked ? <IconFavorite /> : <IconFavoriteBorder />}
-        2,900
+        {likeCount}
       </p>
     </button>
   );

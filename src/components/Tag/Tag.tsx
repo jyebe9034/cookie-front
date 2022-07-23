@@ -2,7 +2,7 @@ import React from 'react';
 import classname from 'classnames';
 
 interface Props {
-  name: string;
+  name?: string;
 }
 
 export default function Tag({ name }: Props) {

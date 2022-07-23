@@ -18,19 +18,23 @@ export default function BoardDetailView() {
     { suspense: true },
   );
 
-  console.log(data);
-
   return (
     <>
       <div className="pb-7 border-b">
-        <BoardDetailTitle />
-        <BoardDetailInfo />
+        <BoardDetailTitle
+          title={data?.board.title}
+          genre={data?.board.genre}
+        />
+        <BoardDetailInfo post={data?.board} />
       </div>
       <div className="min-h-[600px] mt-7">
-        <BoardDetailContent />
+        <BoardDetailContent content={data?.board.contents} />
       </div>
       <div className="mt-7 pt-4 border-t">
-        <BoardDetailUtils />
+        <BoardDetailUtils
+          isLiked={data?.board.hasLiked}
+          likeCount={data?.board.likeCount}
+        />
       </div>
 
       <div className="grid gap-y-4 mt-10">

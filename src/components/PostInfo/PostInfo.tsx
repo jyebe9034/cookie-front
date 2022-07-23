@@ -7,7 +7,7 @@ import IconChat from '@mui/icons-material/Chat';
 import { Post } from 'types/Post';
 
 interface Props {
-  post: Post;
+  post?: Post;
 }
 
 export default function PostInfo({ post }: Props) {
@@ -15,15 +15,15 @@ export default function PostInfo({ post }: Props) {
     <>
       <div className="flex items-center gap-x-1.5 text-gray-400">
         <IconVisibility />
-        {post.readCount}
+        {post?.readCount}
       </div>
       <div className="flex items-center gap-x-1.5 text-gray-400">
         <IconFavorite />
-        {post.likeCount}
+        {post?.likeCount}
       </div>
       <div className="flex items-center gap-x-1.5 text-gray-400">
         <IconChat />
-        {post.commentCount}
+        {post?.commentCount}
       </div>
     </>
   );

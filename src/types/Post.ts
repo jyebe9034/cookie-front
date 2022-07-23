@@ -1,3 +1,5 @@
+import { Comment } from './Comment';
+
 export interface Post {
   boardSeq: number;
   thumbnailPath: string;
@@ -10,6 +12,12 @@ export interface Post {
   likeCount: number;
   commentCount: number;
   genre: string;
+  hasLiked: boolean;
+}
+
+export interface PostDetail {
+  board: Post;
+  commentList: Comment[];
 }
 
 interface BestPost extends Post {

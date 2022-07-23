@@ -2,16 +2,24 @@ import React from 'react';
 
 import Avatar from '@mui/material/Avatar';
 
+import { Post } from 'types/Post';
+
 import PostInfo from 'components/PostInfo';
 
-export default function BoardDetailInfo() {
+interface Props {
+  post?: Post;
+}
+
+export default function BoardDetailInfo({ post }: Props) {
   return (
     <div className="flex items-center gap-x-4 mt-5">
       <Avatar sx={{ width: 50, height: 50 }} />
       <div>
-        <p>유저 닉네임</p>
+        <p>
+          {post?.nickname}
+        </p>
         <div className="flex items-center gap-x-4">
-          {/* <PostInfo /> */}
+          <PostInfo post={post} />
         </div>
       </div>
     </div>
