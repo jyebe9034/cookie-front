@@ -31,6 +31,7 @@ export default function PostItem({ post }: Props) {
         size="large"
         variant="outlined"
         disableElevation
+        onClick={() => window.open(post.webtoonLink)}
       >
         웹툰 보기
       </Button>

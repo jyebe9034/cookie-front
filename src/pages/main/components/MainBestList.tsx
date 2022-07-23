@@ -4,8 +4,8 @@ import PostItem from 'components/PostItem';
 
 import useBestPosts from '../hooks/queries/useBestPosts';
 
-export default function MainPopularList() {
-  const { data } = useBestPosts();
+export default function MainBestList() {
+  const { data: posts } = useBestPosts();
 
   return (
     <div className="mt-28">
@@ -13,9 +13,9 @@ export default function MainPopularList() {
         오늘의 인기 달글 TOP 5
       </h3>
       <div className="grid gap-y-4 mt-10">
-        {data?.bestBoardList.map((post) => (
+        {posts?.bestBoardList.map((post) => (
           <PostItem
-            key={post.seq}
+            key={post.boardSeq}
             post={post}
           />
         ))}

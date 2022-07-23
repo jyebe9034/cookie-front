@@ -1,15 +1,15 @@
 import React from 'react';
 
 import MainBanner from '../components/MainBanner';
-import MainPopularList from '../components/MainPopularList';
-import MainRecentList from '../components/MainRecentList';
+import MainBestList from '../components/MainBestList';
+import MainNewList from '../components/MainNewList';
 
 export default function MainView() {
   return (
     <>
       <MainBanner />
-      <MainRecentList />
-      <MainPopularList />
+      <MainNewList />
+      <MainBestList />
     </>
   );
 }

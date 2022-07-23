@@ -13,6 +13,7 @@ export interface Post {
   commentCount: number;
   genre: string;
   hasLiked: boolean;
+  webtoonLink: string;
 }
 
 export interface PostDetail {
