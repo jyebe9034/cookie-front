@@ -10,7 +10,7 @@ import usePosts from '../hooks/queries/usePosts';
 
 export default function BoardListView() {
   const navigate = useNavigate();
-  const { data: posts } = usePosts();
+  const { data: posts } = usePosts({ title: '' });
 
   return (
     <>
