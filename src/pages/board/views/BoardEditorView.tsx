@@ -48,7 +48,7 @@ export default function BoardEditorView() {
     mutate(
       data,
       {
-        onSuccess: async (response: any) => {
+        onSuccess: async (response) => {
           const { boardSeq } = await response.json();
           queryClient.removeQueries(['posts']);
           navigate(`/board/${boardSeq}`);
