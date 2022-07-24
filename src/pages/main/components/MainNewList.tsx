@@ -4,8 +4,8 @@ import PostItem from 'components/PostItem';
 
 import useBestPosts from '../hooks/queries/useBestPosts';
 
-export default function MainRecentList() {
-  const { data } = useBestPosts();
+export default function MainNewList() {
+  const { data: posts } = useBestPosts();
 
   return (
     <div className="mt-28">
@@ -13,9 +13,9 @@ export default function MainRecentList() {
         오늘의 신규 달글
       </h3>
       <div className="grid gap-y-4 mt-10">
-        {data?.newBoardList.map((post) => (
+        {posts?.newBoardList.map((post) => (
           <PostItem
-            key={post.seq}
+            key={post.boardSeq}
             post={post}
           />
         ))}

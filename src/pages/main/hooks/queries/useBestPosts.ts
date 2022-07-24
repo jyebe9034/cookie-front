@@ -1,4 +1,7 @@
 import { useQuery, UseQueryOptions } from 'react-query';
+
+import fetch from 'lib/fetch';
+
 import { BestPosts } from 'types/Post';
 
 export default function useBestPosts(

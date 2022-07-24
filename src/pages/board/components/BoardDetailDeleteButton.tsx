@@ -10,8 +10,8 @@ export default function BoardDetailDeleteButton() {
   const navigate = useNavigate();
   const { postId } = useParams();
 
-  const { mutate } = useDeletePost();
   const queryClient = useQueryClient();
+  const { mutate } = useDeletePost();
 
   const handleDeletePost = () => {
     mutate(

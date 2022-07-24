@@ -14,7 +14,7 @@ export default function BoardDetailEditButton() {
       color="secondary"
       disableElevation
       sx={{ width: '100px' }}
-      onClick={() => navigate(`/board/${postId}`)}
+      onClick={() => navigate(`/board/${postId}/edit`)}
     >
       수정
     </Button>
